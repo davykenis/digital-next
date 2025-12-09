@@ -141,7 +141,7 @@ export default function Concept() {
               <div className="absolute inset-16 bg-gradient-to-br from-dn-orange/10 to-transparent rounded-full flex items-center justify-center border border-dn-orange/20">
                 <div className="text-center">
                   <Image
-                    src="/DIGITAL.png"
+                    src="/digital-next-logo.png"
                     alt="Digital Next"
                     width={100}
                     height={100}

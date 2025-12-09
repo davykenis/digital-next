@@ -42,7 +42,7 @@ export default function Hero() {
           className="mb-2"
         >
           <Image
-            src="/DIGITAL.png"
+            src="/digital-next-logo.png"
             alt="Digital Next Logo"
             width={500}
             height={500}

@@ -39,7 +39,7 @@ export default function Navigation() {
             {/* Logo */}
             <a href="#home" className="flex items-center gap-3">
               <Image
-                src="/DIGITAL.png"
+                src="/digital-next-logo.png"
                 alt="Digital Next"
                 width={60}
                 height={60}

@@ -95,7 +95,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <Image
-                src="/DIGITAL.png"
+                src="/digital-next-logo.png"
                 alt="Digital Next"
                 width={70}
                 height={70}
