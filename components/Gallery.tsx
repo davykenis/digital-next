@@ -96,9 +96,9 @@ export default function Gallery() {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-b border-dn-orange/20 py-12"
         >
           {[
-            { value: '4+', label: 'Episodes' },
-            { value: '16+', label: 'Expert Gasten' },
-            { value: '4h+', label: 'Content' },
+            { value: '6', label: 'Episodes' },
+            { value: '30+', label: 'Expert Gasten' },
+            { value: '6h+', label: 'Content' },
             { value: '∞', label: 'Inzichten' },
           ].map((stat, index) => (
             <div key={index} className="text-center">

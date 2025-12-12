@@ -14,11 +14,11 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: 'Digital Next | The Podcast of Tomorrow',
+  title: 'Digital Next | De digitale wereld van morgen',
   description: 'Business en IT samen brengen om de toekomst van de digitale wereld te shapen. Een video podcast met round table discussies over digitale innovatie in België.',
   keywords: ['podcast', 'digital', 'IT', 'business', 'België', 'innovatie', 'technologie'],
   openGraph: {
-    title: 'Digital Next | The Podcast of Tomorrow',
+    title: 'Digital Next | De digitale wereld van morgen',
     description: 'Business en IT samen brengen om de toekomst van de digitale wereld te shapen.',
     type: 'website',
   },

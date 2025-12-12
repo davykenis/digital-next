@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pb-20">
         {/* Logo */}
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
@@ -68,7 +68,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-lg md:text-xl text-dn-orange tracking-[0.2em] uppercase mb-4"
         >
-          The Podcast of Tomorrow
+          De digitale wereld van morgen
         </motion.p>
 
         {/* Description */}
@@ -93,13 +93,13 @@ export default function Hero() {
             className="group flex items-center gap-3 bg-gradient-to-r from-dn-orange to-dn-orange-dark text-white px-8 py-4 rounded-full font-medium hover:from-dn-orange-light hover:to-dn-orange transition-all duration-300 shadow-lg shadow-dn-orange/25"
           >
             <Play size={20} className="group-hover:scale-110 transition-transform" />
-            Bekijk Episodes
+            Aankomende Episodes
           </a>
           <a
             href="#concept"
             className="flex items-center gap-3 border border-dn-orange/50 px-8 py-4 rounded-full font-medium hover:bg-dn-orange/10 hover:border-dn-orange transition-all duration-300 text-white"
           >
-            Ontdek het Concept
+            Word Gast
           </a>
         </motion.div>
       </div>
@@ -109,7 +109,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

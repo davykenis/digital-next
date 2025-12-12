@@ -59,15 +59,88 @@ export default function Footer() {
           
           <div className="relative z-10">
             <span className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4 block">
-              Join Digital Next
+              Word Gast
             </span>
             <h2 className="font-display text-4xl md:text-6xl tracking-wider mb-6">
-              WORD ONDERDEEL VAN<br />DIGITAL NEXT
+              DEEL JE EXPERTISE<br />MET DIGITAL NEXT
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-              Wil je als gast deelnemen aan een van onze round table discussies? 
-              Of heb je een topic dat je graag besproken zou zien? Neem contact met ons op!
+              We zoeken C-level executives, IT experts, innovators en auteurs die hun visie willen delen. 
+              Positioneer je bedrijf, bouw je thought leadership op, of promoot je boek en expertise.
             </p>
+            
+            {/* Value Props Detailed Overview */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 max-w-6xl mx-auto">
+              {/* C-Level Executives */}
+              <div className="p-6 bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl text-left">
+                <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">Voor C-Level Executives</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Positioneer je bedrijf als innovatief leider</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Strategisch netwerken met andere executives</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Peer learning en industry insights</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Talent acquisition en employer branding</span>
+                  </li>
+                </ul>
+              </div>
+              
+              {/* IT Experts & Innovators */}
+              <div className="p-6 bg-gradient-to-br from-green-500/10 to-cyan-500/10 border border-green-500/20 rounded-xl text-left">
+                <p className="text-sm text-green-400 uppercase tracking-wider mb-4 font-semibold">Voor IT Experts & Innovators</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Bouw je thought leadership op</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Netwerken met peers en executives</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Exposure en persoonlijke branding</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Deel uitmaken van innovatief platform</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Auteurs & Thought Leaders */}
+              <div className="p-6 bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-xl text-left">
+                <p className="text-sm text-orange-400 uppercase tracking-wider mb-4 font-semibold">Voor Auteurs & Thought Leaders</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Promoot je boek of expertise</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Netwerken met besluitvormers</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Verkoop je diensten en producten</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-dn-orange mt-1">✓</span>
+                    <span className="text-white text-sm">Bouw je persoonlijke merk op</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:info@digitalnext.be"
@@ -77,10 +150,10 @@ export default function Footer() {
                 Contact Opnemen
               </a>
               <a
-                href="#"
+                href="#concept"
                 className="flex items-center justify-center gap-2 border border-dn-orange/50 px-8 py-4 rounded-full font-medium hover:bg-dn-orange/10 hover:border-dn-orange transition-colors text-white"
               >
-                Gast Worden
+                Ontdek de Waarde
                 <ArrowUpRight size={18} />
               </a>
             </div>
@@ -103,7 +176,7 @@ export default function Footer() {
               />
               <div>
                 <h3 className="font-display text-2xl tracking-wider">DIGITAL NEXT</h3>
-                <p className="text-xs text-gray-500 uppercase tracking-widest">The Podcast of Tomorrow</p>
+                <p className="text-xs text-gray-500 uppercase tracking-widest">De digitale wereld van morgen</p>
               </div>
             </div>
             <p className="text-gray-500 leading-relaxed mb-6 max-w-sm">

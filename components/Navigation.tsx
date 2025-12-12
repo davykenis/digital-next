@@ -21,6 +21,7 @@ export default function Navigation() {
     { name: 'Home', href: '#home' },
     { name: 'Concept', href: '#concept' },
     { name: 'Episodes', href: '#episodes' },
+    { name: 'Word Gast', href: '#contact', highlight: true },
     { name: 'Contact', href: '#contact' },
   ]
 
@@ -51,16 +52,26 @@ export default function Navigation() {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm uppercase tracking-widest text-gray-300 hover:text-dn-orange transition-colors relative group"
-                >
-                  {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-dn-orange transition-all duration-300 group-hover:w-full" />
-                </a>
+                item.highlight ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm uppercase tracking-widest bg-gradient-to-r from-dn-orange to-dn-orange-dark text-white px-4 py-2 rounded-full font-medium hover:from-dn-orange-light hover:to-dn-orange transition-all shadow-lg shadow-dn-orange/25"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm uppercase tracking-widest text-gray-300 hover:text-dn-orange transition-colors relative group"
+                  >
+                    {item.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-dn-orange transition-all duration-300 group-hover:w-full" />
+                  </a>
+                )
               ))}
             </div>
 
@@ -93,7 +104,7 @@ export default function Navigation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-display text-4xl tracking-wider"
+                  className={`font-display text-4xl tracking-wider ${item.highlight ? 'text-dn-orange' : ''}`}
                 >
                   {item.name}
                 </motion.a>

@@ -1,4 +1,4 @@
-# Digital Next - The Podcast of Tomorrow
+# Digital Next - De digitale wereld van morgen
 
 Een moderne, visueel aantrekkelijke website voor de Digital Next video podcast.
 
