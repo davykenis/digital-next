@@ -265,12 +265,6 @@ export default function Episodes() {
                 
                 {/* Mystery Placeholder - No Image */}
                 <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-dn-orange/20 via-dn-orange-dark/10 to-black">
-                  {/* Animated mystery pattern */}
-                  <div className="absolute inset-0 opacity-30">
-                    <div className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-dn-orange/30 rounded-full animate-pulse" />
-                    <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border-2 border-dn-orange/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-                  </div>
-                  
                   {/* Episode number */}
                   <div className="absolute bottom-4 left-4 font-display text-6xl text-dn-orange/10">
                     {episode.number}
