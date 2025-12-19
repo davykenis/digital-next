@@ -265,10 +265,6 @@ export default function Episodes() {
                 
                 {/* Mystery Placeholder - No Image */}
                 <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-dn-orange/20 via-dn-orange-dark/10 to-black">
-                  {/* Episode number */}
-                  <div className="absolute bottom-4 left-4 font-display text-6xl text-dn-orange/10">
-                    {episode.number}
-                  </div>
                   {/* Special badge */}
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-dn-orange to-dn-orange-dark text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg shadow-dn-orange/50">
                     Seizoensafsluiter
@@ -290,7 +286,7 @@ export default function Episodes() {
                 <div className="p-6 relative z-10">
                   <div className="mb-3">
                     <span className="inline-block bg-gradient-to-r from-dn-orange to-dn-orange-dark text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg shadow-dn-orange/25">
-                      EP {episode.number}
+                      Seizoensafsluiter
                     </span>
                   </div>
                   <h3 className="font-display text-xl tracking-wider mb-2 text-white group-hover:text-dn-orange-light transition-colors">
