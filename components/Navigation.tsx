@@ -18,11 +18,11 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Concept', href: '#concept' },
-    { name: 'Episodes', href: '#episodes' },
-    { name: 'Word Gast', href: '#contact', highlight: true },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/#home' },
+    { name: 'Concept', href: '/#concept' },
+    { name: 'Episodes', href: '/#episodes' },
+    { name: 'Word Gast', href: '/#contact', highlight: true },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   return (
@@ -38,7 +38,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="#home" className="flex items-center gap-3">
+            <a href="/#home" className="flex items-center gap-3">
               <Image
                 src="/digital-next-logo.png"
                 alt="Digital Next"

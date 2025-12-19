@@ -3,49 +3,80 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Play, ChevronRight, ArrowUpRight } from 'lucide-react'
+import { Play, ChevronRight, ArrowUpRight, HelpCircle } from 'lucide-react'
 import Image from 'next/image'
 
 const upcomingEpisodes = [
   {
     id: 1,
     number: '01',
-    title: 'De Toekomst van AI in Belgische Bedrijven',
-    description: 'Hoe transformeert artificial intelligence de Belgische bedrijfswereld? Welke kansen liggen er voor innovatie en hoe kunnen bedrijven AI strategisch inzetten? Een discussie over praktische implementatie, ethische overwegingen en de toekomst van werk.',
-    topics: ['AI Strategie', 'Innovatie', 'Digitalisering', 'Belgische Markt'],
-    lookingFor: 'We zoeken C-level executives, IT leiders en AI experts die hun visie willen delen.',
+    title: 'De toekomst van belgische bedrijven',
+    description: 'Hoe zien Belgische bedrijven eruit in de toekomst? Welke transformaties staan er voor de deur en hoe kunnen organisaties zich hierop voorbereiden? Een discussie over strategische visie, innovatie en de toekomst van de Belgische bedrijfswereld.',
+    topics: ['Toekomstvisie', 'Innovatie', 'Digitalisering', 'Belgische Markt'],
+    lookingFor: 'We zoeken C-level executives, IT leiders en strategische experts die hun visie willen delen.',
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop',
     featured: true,
   },
   {
     id: 2,
     number: '02',
-    title: 'Cloud Transformatie: Van Strategie tot Executie',
-    description: 'Hoe migreren Belgische ondernemingen succesvol naar de cloud? Wat zijn de belangrijkste valkuilen en hoe bouw je een solide cloud strategie? Praktische inzichten van bedrijven die de transformatie hebben doorlopen.',
-    topics: ['Cloud Migratie', 'IT Strategie', 'Digital Transformatie'],
-    lookingFor: 'Cloud architects, IT directors en executives met cloud ervaring gezocht.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
+    title: 'AI komt niet voor onze jobs — maar zijn onze mensen er klaar voor?',
+    description: 'AI transformeert de manier waarop we werken, maar de echte uitdaging ligt niet bij de technologie zelf. Zijn onze medewerkers klaar voor deze verandering? Welke vaardigheden en mindset zijn nodig? Een open gesprek over menselijke voorbereiding op de AI-revolutie.',
+    topics: ['AI', 'Mens & Technologie', 'Change Management', 'Skills'],
+    lookingFor: 'HR leiders, change managers, AI experts en executives die ervaring hebben met AI-adoptie gezocht.',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop',
     featured: false,
   },
   {
     id: 3,
     number: '03',
-    title: 'Cybersecurity in het Digitale Tijdperk',
-    description: 'Wat zijn de grootste cyberbedreigingen voor Belgische organisaties? Hoe bescherm je je bedrijf tegen moderne aanvallen en bouw je een robuuste security cultuur? Een gesprek over best practices en toekomstige uitdagingen.',
-    topics: ['Cybersecurity', 'Risk Management', 'Digital Veiligheid'],
-    lookingFor: 'CISO\'s, security experts en risk managers welkom om te delen.',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop',
+    title: 'Waarom chaos het nieuwe normaal is — en wat dat vraagt van leiders.',
+    description: 'Chaos en onzekerheid zijn niet langer uitzonderingen, maar de nieuwe realiteit. Hoe leiden organisaties in deze omgeving? Welke leiderschapskwaliteiten zijn essentieel en hoe creëer je veerkracht in onzekere tijden? Een gesprek over leiderschap in complexiteit.',
+    topics: ['Leiderschap', 'Chaos', 'Veerkracht', 'Navigatie'],
+    lookingFor: 'C-level executives, leiders en strategen die hebben geleerd navigeren door complexiteit welkom.',
+    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=400&fit=crop',
     featured: false,
   },
   {
     id: 4,
     number: '04',
-    title: 'Data-Driven Decision Making',
-    description: 'Hoe gebruiken Belgische bedrijven data analytics en business intelligence voor betere besluitvorming? Welke rol speelt data in strategische planning en hoe creëer je een data-driven cultuur binnen je organisatie?',
-    topics: ['Data Analytics', 'Business Intelligence', 'Strategie'],
-    lookingFor: 'CDO\'s, data scientists en executives met data expertise gezocht.',
+    title: 'Hoe creeër je snelheid in tijden van verandering?',
+    description: 'Snelheid is cruciaal in een snel veranderende wereld. Maar hoe creëer je snelheid zonder kwaliteit te verliezen? Welke structuren en processen helpen organisaties om sneller te innoveren en te reageren? Praktische tips van bedrijven die snelheid hebben weten te realiseren.',
+    topics: ['Snelheid', 'Innovatie', 'Agiliteit', 'Organisatie'],
+    lookingFor: 'Innovatie leiders, agile coaches en executives met ervaring in snelle transformatie gezocht.',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop',
+    featured: false,
+  },
+  {
+    id: 5,
+    number: '05',
+    title: 'Digitalisering faalt zelden door technologie — maar door mensen en structuren.',
+    description: 'Technologie is zelden het probleem bij mislukte digitalisering. Het zijn de mensen, cultuur en organisatiestructuren die bepalen of transformatie slaagt. Wat zijn de belangrijkste valkuilen en hoe voorkom je ze? Praktische inzichten van bedrijven die het wel goed hebben gedaan.',
+    topics: ['Digitalisering', 'Organisatie', 'Cultuur', 'Transformatie'],
+    lookingFor: 'Transformatie leiders, organisatie experts en executives met ervaring in digitale transformatie gezocht.',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
+    featured: false,
+  },
+  {
+    id: 6,
+    number: '06',
+    title: 'Wat moeten we vandaag doen om morgen nog relevant te zijn?',
+    description: 'Relevantie is geen gegeven, maar iets wat je actief moet onderhouden. Welke acties moeten organisaties vandaag ondernemen om morgen nog van waarde te zijn? Een strategische discussie over toekomstbestendigheid en het creëren van blijvende relevantie.',
+    topics: ['Relevantie', 'Strategie', 'Toekomstbestendigheid', 'Innovatie'],
+    lookingFor: 'Strategische leiders, innovators en executives die nadenken over lange termijn relevantie welkom.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
     featured: false,
+  },
+  {
+    id: 7,
+    number: 'SPECIAL',
+    title: 'Seizoensafsluiter',
+    description: 'Een exclusieve surprise aflevering die het seizoen afsluit met special guests en onverwachte inzichten. Wat staat er op het programma? Dat blijft een verrassing...',
+    topics: ['Surprise', 'Special Guests', 'Seizoensafsluiter'],
+    lookingFor: 'We zoeken special guests die bereid zijn om deel te nemen aan deze unieke aflevering.',
+    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop',
+    featured: false,
+    surprise: true,
   },
 ]
 
@@ -155,7 +186,7 @@ export default function Episodes() {
 
         {/* Episode Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {upcomingEpisodes.filter(ep => !ep.featured).map((episode, index) => (
+          {upcomingEpisodes.filter(ep => !ep.featured && !ep.surprise).map((episode, index) => (
             <motion.div
               key={episode.id}
               initial={{ opacity: 0, y: 30 }}
@@ -212,6 +243,82 @@ export default function Episodes() {
                     className="flex items-center text-sm text-gray-400 group-hover:text-dn-orange transition-colors"
                   >
                     Word Gast
+                    <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+          
+          {/* Surprise Episode - Special Design in Grid */}
+          {upcomingEpisodes.filter(ep => ep.surprise).map((episode, index) => (
+            <motion.div
+              key={episode.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 + (upcomingEpisodes.filter(ep => !ep.featured && !ep.surprise).length * 0.1) + (index * 0.1) }}
+              className="group episode-card"
+            >
+              <div className="overflow-hidden rounded-2xl border-2 border-dn-orange/50 bg-gradient-to-br from-dn-orange/10 via-dn-orange-dark/5 to-black card-hover h-full relative">
+                {/* Animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-dn-orange/5 via-transparent to-dn-orange/5 animate-pulse" />
+                
+                {/* Mystery Placeholder - No Image */}
+                <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-dn-orange/20 via-dn-orange-dark/10 to-black">
+                  {/* Animated mystery pattern */}
+                  <div className="absolute inset-0 opacity-30">
+                    <div className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-dn-orange/30 rounded-full animate-pulse" />
+                    <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border-2 border-dn-orange/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+                  </div>
+                  
+                  {/* Episode number */}
+                  <div className="absolute bottom-4 left-4 font-display text-6xl text-dn-orange/10">
+                    {episode.number}
+                  </div>
+                  {/* Special badge */}
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-dn-orange to-dn-orange-dark text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg shadow-dn-orange/50">
+                    Seizoensafsluiter
+                  </div>
+                  
+                  {/* Mystery overlay - always visible but subtle */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center opacity-40 group-hover:opacity-100 transition-opacity">
+                      <div className="w-16 h-16 rounded-full bg-dn-orange/20 border-2 border-dn-orange/50 flex items-center justify-center mb-3 mx-auto backdrop-blur-sm">
+                        <HelpCircle size={32} className="text-dn-orange" strokeWidth={2} />
+                      </div>
+                      <p className="text-white text-sm font-medium">Stay tuned...</p>
+                      <p className="text-gray-400 text-xs mt-1">Coming Soon</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6 relative z-10">
+                  <div className="mb-3">
+                    <span className="inline-block bg-gradient-to-r from-dn-orange to-dn-orange-dark text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg shadow-dn-orange/25">
+                      EP {episode.number}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-xl tracking-wider mb-2 text-white group-hover:text-dn-orange-light transition-colors">
+                    {episode.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm line-clamp-3 mb-4">
+                    {episode.description}
+                  </p>
+                  <div className="mb-3">
+                    <div className="flex flex-wrap gap-1.5">
+                      {episode.topics.slice(0, 2).map((topic, i) => (
+                        <span key={i} className="text-xs bg-dn-orange/20 border border-dn-orange/50 text-dn-orange px-2 py-0.5 rounded-full">
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <a 
+                    href="#contact"
+                    className="flex items-center text-sm text-dn-orange group-hover:text-dn-orange-light transition-colors font-medium"
+                  >
+                    Word Special Guest
                     <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>

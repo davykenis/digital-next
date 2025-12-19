@@ -34,7 +34,7 @@ const footerLinks = [
     title: 'Contact',
     links: [
       { name: 'Gast Worden', href: '#' },
-      { name: 'Samenwerken', href: '#' },
+      { name: 'Samenwerken', href: '/sponsors' },
       { name: 'Pers', href: '#' },
       { name: 'Contact', href: '#contact' },
     ],
