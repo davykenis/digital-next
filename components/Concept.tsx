@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import Image from 'next/image'
 import { Lightbulb, Globe, Mic, Users, Building2, Target, Network, Award, ArrowUpRight, BookOpen } from 'lucide-react'
 
 const features = [
@@ -42,7 +43,7 @@ export default function Concept() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
-        {/* Section header */}
+        {/* Section header with intro text and AE Partner Logo */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -56,11 +57,39 @@ export default function Concept() {
             DIGITAL NEXT
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-dn-orange to-transparent mx-auto mb-8" />
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          
+          {/* Intro text */}
+          <p className="text-xl text-gray-400 leading-relaxed text-center max-w-3xl mx-auto mb-8">
             Een uniek platform waar <span className="text-dn-orange font-semibold">business en IT</span> samenkomen 
             om de toekomst van de digitale wereld te bespreken en te shapen. Elke episode brengt 
             experts van verschillende achtergronden samen voor diepgaande round table discussies.
           </p>
+          
+          {/* AE Partner Logo */}
+          <div className="flex items-center justify-center">
+            <div className="text-center">
+              <p className="text-xs text-gray-500 mb-4 uppercase tracking-wider">
+                Een initiatief van
+              </p>
+              <a
+                href="https://www.ae.be"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block group"
+                aria-label="Visit AE Partner website"
+              >
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-dn-orange/50 hover:bg-white/10 transition-all duration-300 inline-block">
+                  <Image
+                    src="/Logo-AE-Partner.png"
+                    alt="AE Partner Logo - Partner in Digital Excellence"
+                    width={250}
+                    height={125}
+                    className="object-contain h-14 md:h-16 opacity-90 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         {/* Features grid */}

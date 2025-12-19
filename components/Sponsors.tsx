@@ -8,13 +8,6 @@ import { ArrowRight } from 'lucide-react'
 
 const sponsors = [
   {
-    id: 1,
-    name: 'AE Partner',
-    logo: '/Logo-AE-Partner.png',
-    alt: 'AE Partner Logo - Partner in Digital Excellence',
-    website: 'https://www.ae.be',
-  },
-  {
     id: 2,
     name: 'Sponsor 2',
     logo: '/sponsor-placeholder.png',
@@ -64,7 +57,7 @@ export default function Sponsors() {
         </motion.div>
 
         {/* Sponsors Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
           {sponsors.map((sponsor, index) => {
             const SponsorContent = (
               <div className="aspect-square bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center hover:border-dn-orange/30 transition-all duration-300 hover:bg-white/10 w-full h-full">
